@@ -15,7 +15,7 @@ def request_api_data(query_char):
         raise RuntimeError(f'Error fetching: {res.status_code}, check api and try again')
     return res
 
-# funcion to check number of leak passwords
+# function to check number of leak passwords
 def get_password_leaks_count(hashes, hash_to_check):
     hashes = (line.split(':') for line in hashes.text.splitlines())
     for h, count in hashes:
